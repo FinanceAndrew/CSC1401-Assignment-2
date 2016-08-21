@@ -2,10 +2,10 @@
 CSC1401 Foundation Programming Assignment
 
 ### Team Member Tasks ###
-Tom -
-Andrew -
-Ari -
-Team -
+* Tom - *nothing yet*
+* Andrew - *nothing yet*
+* Ari - *nothing yet*
+* Team - *nothing yet*
 
 # Operation of the Program
 As the prototype for a web-based shopping cart system, the program is to be implemented in
