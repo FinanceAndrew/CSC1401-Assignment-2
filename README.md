@@ -1,6 +1,12 @@
 # CSC1401-Assignment-2
 CSC1401 Foundation Programming Assignment
 
+### Team Member Tasks ###
+Tom -
+Andrew -
+Ari -
+Team -
+
 # Operation of the Program
 As the prototype for a web-based shopping cart system, the program is to be implemented in
 JavaScript and running on F irefox, an operating system independent web browser. HomewareCity
