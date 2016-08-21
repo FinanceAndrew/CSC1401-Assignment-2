@@ -38,10 +38,10 @@ quantity, and cost.
 * To make the Shopping Cart System user-friendly, HomewareCity also expects the program
 to display some statistic information:
 
-* The total amount for ordered items in the shopping cart;
-* The average cost per item in the cart;
-* The most expensive product item;
-* The least expensive product item.
+  * The total amount for ordered items in the shopping cart;
+  * The average cost per item in the cart;
+  * The most expensive product item;
+  * The least expensive product item.
 
 # Requirements
 These requirements are in conjunction to the steps above.
@@ -58,17 +58,17 @@ column is a set of products with code, name, and price.
 
 Req 2. You need to implement a validation plan to get a valid input from the user for product code. An
 input value is considered invalid if:
-* it is not a number at all;
-* it is not an integer number;
-* it is a negative number;
-* it is a number out of range (greater than or equal to the size of productListArr).
+  * it is not a number at all;
+  * it is not an integer number;
+  * it is a negative number;
+  * it is a number out of range (greater than or equal to the size of productListArr).
 
 Req 3. You need to implement another validation plan to get a valid input from the user for quantity. An
 input value is considered invalid if:
-* it is not a number at all;
-* it is not an integer number;
-* it is zero or a negative number;
-* it is greater than 100.
+  * it is not a number at all;
+  * it is not an integer number;
+  * it is zero or a negative number;
+  * it is greater than 100.
 
 Req 4. You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
 Requirements and Fig. 1 for the detail of data flow in the loop. Clearly, this task should
@@ -127,9 +127,9 @@ program should be running appropriately without any syntax and logic errors.
 Func-Req 1. All code should appear in the script section in the head of the HTML document. Do not
 write any code in the HTML body. All functionality are delivered by JavaScript.
 In the script order your code as follows:
-(a) Constants;
-(b) Variables and objects (declared and initialised);
-(c) Other statements.
+  * Constants;
+  * Variables and objects (declared and initialised);
+  * Other statements.
 
 Func-Req 2. Variable and constant identifiers should use an appropriate convention. Identifiers should be
 written consistently throughout the code.
