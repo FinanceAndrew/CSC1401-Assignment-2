@@ -35,10 +35,10 @@ quantity, and cost.
 
 8. To make the Shopping Cart System user-friendly, HomewareCity also expects the program
 to display some statistic information:
-- The total amount for ordered items in the shopping cart;
-- The average cost per item in the cart;
-- The most expensive product item;
-- The least expensive product item.
+i.    The total amount for ordered items in the shopping cart;
+ii.   The average cost per item in the cart;
+iii.  The most expensive product item;
+iv.   The least expensive product item.
 
 # Requirements Requirements
 These requirements are in conjunction to the steps above.
@@ -55,17 +55,17 @@ column is a set of products with code, name, and price.
 
 2. You need to implement a validation plan to get a valid input from the user for product code. An
 input value is considered invalid if:
-- it is not a number at all;
-- it is not an integer number;
-- it is a negative number;
-- it is a number out of range (greater than or equal to the size of productListArr).
+i. it is not a number at all;
+ii.   it is not an integer number;
+iii.  it is a negative number;
+iv.   it is a number out of range (greater than or equal to the size of productListArr).
 
 3. You need to implement another validation plan to get a valid input from the user for quantity. An
 input value is considered invalid if:
-- it is not a number at all;
-- it is not an integer number;
-- it is zero or a negative number;
-- it is greater than 100.
+i.    it is not a number at all;
+ii.   it is not an integer number;
+iii.  it is zero or a negative number;
+iv.   it is greater than 100.
 
 4. You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
 Requirements and Fig. 1 for the detail of data flow in the loop. Clearly, this task should
@@ -121,18 +121,18 @@ You need to test the program for all functionality thoroughly before delivering 
 program should be running appropriately without any syntax and logic errors.
 
 # Non-Functional Requirements
-- All code should appear in the script section in the head of the HTML document. Do not
+i. All code should appear in the script section in the head of the HTML document. Do not
 write any code in the HTML body. All functionality are delivered by JavaScript.
-- In the script order your code as follows:
+ii. In the script order your code as follows:
 (a) Constants;
 (b) Variables and objects (declared and initialised);
 (c) Other statements.
 
-- Variable and constant identifiers should use an appropriate convention. Identifiers should be
+iii. Variable and constant identifiers should use an appropriate convention. Identifiers should be
 written consistently throughout the code.
-- Code is indented appropriately and grouped in blocks according to the common tasks attempting
+iv. Code is indented appropriately and grouped in blocks according to the common tasks attempting
 to.
-- Appropriate comments should be added to all blocks of code. Do not simply translate the
+v. Appropriate comments should be added to all blocks of code. Do not simply translate the
 syntax into English for comments, instead, describe the purpose of the code block.
 
 # Submission
@@ -147,15 +147,15 @@ system will accept only the files with the extensions specified in this section.
 of your own words describes the following issues. You should first specify the registered name
 of the team and all members’ name and student ID on the top of the statement.
 
-- The state of your assignment, such as, any known functionality that has not been
+i. The state of your assignment, such as, any known functionality that has not been
 implemented, etc. (It is expected that most teams will implement all of the functionality
 of this assignment.)
 
-- Problems encountered, such as, any problems that you encountered during the assignment
+ii. Problems encountered, such as, any problems that you encountered during the assignment
 work and how you dealt with them. This may include technical problems in
 programming and people-soft problems in team working;
 
-- Reflection, such as, any lessons learnt in doing the assignment and handling teamworking
+iii. Reflection, such as, any lessons learnt in doing the assignment and handling teamworking
 and suggestions to future programming projects.
 
 2. The program in a file saved with an .html extension contains the source code implemented
