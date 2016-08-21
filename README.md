@@ -35,12 +35,13 @@ quantity, and cost.
 
 8. To make the Shopping Cart System user-friendly, HomewareCity also expects the program
 to display some statistic information:
-i.    The total amount for ordered items in the shopping cart;
-ii.   The average cost per item in the cart;
-iii.  The most expensive product item;
-iv.   The least expensive product item.
 
-# Requirements Requirements
+* The total amount for ordered items in the shopping cart;
+* The average cost per item in the cart;
+* The most expensive product item;
+* The least expensive product item.
+
+# Requirements
 These requirements are in conjunction to the steps above.
 
 You need to create two arrays – one to store the product code of ordered products (namely
@@ -48,60 +49,60 @@ orderedP roductCodeArr), the other to store the quantity of ordered products (na
 Just like productListArr and priceListArr, an ordered products’ code and quantity will be stored
 at exactly the same index in their corresponding arrays.
 
-1. In the beginning of the program, print to a table the catalogue for all products including name,
+Req 1. In the beginning of the program, print to a table the catalogue for all products including name,
 code, and price, to assist users shopping. You should use a loop plan to access the data stored in
 productListArr and priceListArr and present it in a four-column table, like Figure 4, where each
 column is a set of products with code, name, and price.
 
-2. You need to implement a validation plan to get a valid input from the user for product code. An
+Req 2. You need to implement a validation plan to get a valid input from the user for product code. An
 input value is considered invalid if:
-i. it is not a number at all;
-ii.   it is not an integer number;
-iii.  it is a negative number;
-iv.   it is a number out of range (greater than or equal to the size of productListArr).
+* it is not a number at all;
+* it is not an integer number;
+* it is a negative number;
+* it is a number out of range (greater than or equal to the size of productListArr).
 
-3. You need to implement another validation plan to get a valid input from the user for quantity. An
+Req 3. You need to implement another validation plan to get a valid input from the user for quantity. An
 input value is considered invalid if:
-i.    it is not a number at all;
-ii.   it is not an integer number;
-iii.  it is zero or a negative number;
-iv.   it is greater than 100.
+* it is not a number at all;
+* it is not an integer number;
+* it is zero or a negative number;
+* it is greater than 100.
 
-4. You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
+Req 4. You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
 Requirements and Fig. 1 for the detail of data flow in the loop. Clearly, this task should
 incorporate the works in Task 2 and 3.
 
-5. Your program needs to calculate the total cost for all ordered products in the shopping cart. The
+Req 5. Your program needs to calculate the total cost for all ordered products in the shopping cart. The
 calculation formula is provided: 
 
 ![alt tag](https://i.imgur.com/omlUchO.jpg)
 
-6. Your program needs to find the most expensive product in the shopping cart. To do it, for each of the
+Req 6. Your program needs to find the most expensive product in the shopping cart. To do it, for each of the
 products added in to the cart you need to retrieve the corresponding price from priceListArr, and
 then compare the prices one by one. Once you find out the most expensive price, the corresponding
 product item in productListArr will be the most expensive product in the shopping cart.
 If you have multiple products in the cart sharing the same most expensive price you can select any
 one of them as the “most expensive product”.
 
-7. Your program also needs to find the least expensive product in the shopping cart. You may adopt
+Req 7. Your program also needs to find the least expensive product in the shopping cart. You may adopt
 the the same strategy in previous task for this task. Again, if you have multiple products in the
 cart sharing the same least expensive price you can select any one of them as the “least expensive
 product”.
 
-8. Your program needs to be able to calculate the average cost for all product items in the shopping
+Req 8. Your program needs to be able to calculate the average cost for all product items in the shopping
 cart. This can be done by the total cost divided by the accumulated value of quantities:
 
 ![alt tag](https://i.imgur.com/e7aBaLp.jpg)
 
 You should handle the “Division by Zero” exception when calculating average.
 
-9. Print to a table the detailed information of shopping cart, such as product name, price, quantity,
+Req 9. Print to a table the detailed information of shopping cart, such as product name, price, quantity,
 and cost. You should adopt an iteration plan to visit the elements stored in quantityArr and
 orderedP roductCodeArr in order to get the index to retrieve product names and prices from
 productListArr and priceListArr.
 All currency values should be at cents in terms of precision.
 
-10. Print to an unordered list the statistic information (total cost, most expensive item, least expensive
+Req 10. Print to an unordered list the statistic information (total cost, most expensive item, least expensive
 item, and average cost per unit for the ordered product items) on shopping cart.
 The table and the list should be formatted like the screenshot in Figure 2. The same as that in
 Task 9, all currency values should be at cents in terms of precision.
@@ -121,18 +122,20 @@ You need to test the program for all functionality thoroughly before delivering 
 program should be running appropriately without any syntax and logic errors.
 
 # Non-Functional Requirements
-i. All code should appear in the script section in the head of the HTML document. Do not
+Func-Req 1. All code should appear in the script section in the head of the HTML document. Do not
 write any code in the HTML body. All functionality are delivered by JavaScript.
-ii. In the script order your code as follows:
+In the script order your code as follows:
 (a) Constants;
 (b) Variables and objects (declared and initialised);
 (c) Other statements.
 
-iii. Variable and constant identifiers should use an appropriate convention. Identifiers should be
+Func-Req 2. Variable and constant identifiers should use an appropriate convention. Identifiers should be
 written consistently throughout the code.
-iv. Code is indented appropriately and grouped in blocks according to the common tasks attempting
+
+Func-Req 3. Code is indented appropriately and grouped in blocks according to the common tasks attempting
 to.
-v. Appropriate comments should be added to all blocks of code. Do not simply translate the
+
+Func-Req 4. Appropriate comments should be added to all blocks of code. Do not simply translate the
 syntax into English for comments, instead, describe the purpose of the code block.
 
 # Submission
@@ -143,21 +146,21 @@ For a complete submission you need to submit two files as specified below. You c
 individually or compress them into a .zip (or .rar ) file and submit it. The assignment submission
 system will accept only the files with the extensions specified in this section.
 
-1. Statement of Completeness in a file saved in .doc, .docx, .odt, .rtf or .txt format in 200-300
+One. Statement of Completeness in a file saved in .doc, .docx, .odt, .rtf or .txt format in 200-300
 of your own words describes the following issues. You should first specify the registered name
 of the team and all members’ name and student ID on the top of the statement.
 
-i. The state of your assignment, such as, any known functionality that has not been
+* The state of your assignment, such as, any known functionality that has not been
 implemented, etc. (It is expected that most teams will implement all of the functionality
 of this assignment.)
 
-ii. Problems encountered, such as, any problems that you encountered during the assignment
+* Problems encountered, such as, any problems that you encountered during the assignment
 work and how you dealt with them. This may include technical problems in
 programming and people-soft problems in team working;
 
-iii. Reflection, such as, any lessons learnt in doing the assignment and handling teamworking
+* Reflection, such as, any lessons learnt in doing the assignment and handling teamworking
 and suggestions to future programming projects.
 
-2. The program in a file saved with an .html extension contains the source code implemented
+Two. The program in a file saved with an .html extension contains the source code implemented
 following the functional and non-functional requirements.
 
