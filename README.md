@@ -5,35 +5,37 @@ CSC1401 Foundation Programming Assignment
 As the prototype for a web-based shopping cart system, the program is to be implemented in
 JavaScript and running on F irefox, an operating system independent web browser. HomewareCity
 has specified the following business requirements:
-1. The program should be running without errors throughout two Phases: Information Gathering
+
+* The program should be running without errors throughout two Phases: Information Gathering
 and Information Presenting.
 
-2. In Information Gathering, each time the user adds one product item to the shopping cart.
+* In Information Gathering, each time the user adds one product item to the shopping cart.
 The program should first confirm with the user for willingness of shopping before proceeding
 to gather information of the product item in purchase.
 
-3. When receiving an order, the program should first prompt and ask the user to enter the
+* When receiving an order, the program should first prompt and ask the user to enter the
 product code before adding the product item to the shopping cart. If the user enters an
 invalid value, for example, a non-number value or a non-existing product code, the program
 should alert an error message on screen and then prompt the user for re-enter. The process
 should iterate until a valid product code is entered.
 
-4. If the entered product code is valid, the program should then prompt the user to input the
+* If the entered product code is valid, the program should then prompt the user to input the
 quantity value in purchase. Again, if an invalid value is input, such as a non-number value,
 a negative number or zero, the program should display an error message then iterate until
 receive a valid number for quantity.
 
-5. After valid input of product code and quantity, the program should add the product item
+* After valid input of product code and quantity, the program should add the product item
 into the shopping cart, and then loop back to seek user confirmation for either proceeding
 further to add one more item or moving to the Information Presenting Phase for check-out.
-6. If the user confirms not to shop anymore, the Information Gathering Phase is completed and
+
+* If the user confirms not to shop anymore, the Information Gathering Phase is completed and
 the program then moves to Information Presenting.
 
-7. In the Information Presenting Phase, the program prints on the web page a table containing
+* In the Information Presenting Phase, the program prints on the web page a table containing
 the product items in the shopping cart, including information such as product names, prices,
 quantity, and cost.
 
-8. To make the Shopping Cart System user-friendly, HomewareCity also expects the program
+* To make the Shopping Cart System user-friendly, HomewareCity also expects the program
 to display some statistic information:
 
 * The total amount for ordered items in the shopping cart;
