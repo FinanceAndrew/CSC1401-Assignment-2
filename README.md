@@ -49,7 +49,7 @@ to display some statistic information:
   * The most expensive product item;
   * The least expensive product item.
 
-# Requirements
+# Application Requirements
 These requirements are in conjunction to the steps above.
 
 You need to create two arrays – one to store the product code of ordered products (namely
