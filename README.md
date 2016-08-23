@@ -7,7 +7,7 @@ CSC1401 Foundation Programming Assignment
 * Ari - *nothing yet*
 * Team - *nothing yet*
 
-# Operation of the Program
+# Business Requirements
 As the prototype for a web-based shopping cart system, the program is to be implemented in
 JavaScript and running on F irefox, an operating system independent web browser. HomewareCity
 has specified the following business requirements:
