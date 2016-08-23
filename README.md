@@ -12,36 +12,36 @@ As the prototype for a web-based shopping cart system, the program is to be impl
 JavaScript and running on F irefox, an operating system independent web browser. HomewareCity
 has specified the following business requirements:
 
-* 1 The program should be running without errors throughout two Phases: Information Gathering
+*1* The program should be running without errors throughout two Phases: Information Gathering
 and Information Presenting.
 
-* 2 In Information Gathering, each time the user adds one product item to the shopping cart.
+*2* In Information Gathering, each time the user adds one product item to the shopping cart.
 The program should first confirm with the user for willingness of shopping before proceeding
 to gather information of the product item in purchase.
 
-* 3 When receiving an order, the program should first prompt and ask the user to enter the
+*3* When receiving an order, the program should first prompt and ask the user to enter the
 product code before adding the product item to the shopping cart. If the user enters an
 invalid value, for example, a non-number value or a non-existing product code, the program
 should alert an error message on screen and then prompt the user for re-enter. The process
 should iterate until a valid product code is entered.
 
-* 4 If the entered product code is valid, the program should then prompt the user to input the
+*4* If the entered product code is valid, the program should then prompt the user to input the
 quantity value in purchase. Again, if an invalid value is input, such as a non-number value,
 a negative number or zero, the program should display an error message then iterate until
 receive a valid number for quantity.
 
-* 5 After valid input of product code and quantity, the program should add the product item
+*5* After valid input of product code and quantity, the program should add the product item
 into the shopping cart, and then loop back to seek user confirmation for either proceeding
 further to add one more item or moving to the Information Presenting Phase for check-out.
 
-* 6 If the user confirms not to shop anymore, the Information Gathering Phase is completed and
+*6* If the user confirms not to shop anymore, the Information Gathering Phase is completed and
 the program then moves to Information Presenting.
 
-* 7 In the Information Presenting Phase, the program prints on the web page a table containing
+*7* In the Information Presenting Phase, the program prints on the web page a table containing
 the product items in the shopping cart, including information such as product names, prices,
 quantity, and cost.
 
-* 8 To make the Shopping Cart System user-friendly, HomewareCity also expects the program
+*8* To make the Shopping Cart System user-friendly, HomewareCity also expects the program
 to display some statistic information:
 
   * The total amount for ordered items in the shopping cart;
@@ -57,60 +57,60 @@ orderedP roductCodeArr), the other to store the quantity of ordered products (na
 Just like productListArr and priceListArr, an ordered products’ code and quantity will be stored
 at exactly the same index in their corresponding arrays.
 
-Req 1. In the beginning of the program, print to a table the catalogue for all products including name,
+*1* In the beginning of the program, print to a table the catalogue for all products including name,
 code, and price, to assist users shopping. You should use a loop plan to access the data stored in
 productListArr and priceListArr and present it in a four-column table, like Figure 4, where each
 column is a set of products with code, name, and price.
 
-Req 2. You need to implement a validation plan to get a valid input from the user for product code. An
+*2* You need to implement a validation plan to get a valid input from the user for product code. An
 input value is considered invalid if:
   * it is not a number at all;
   * it is not an integer number;
   * it is a negative number;
   * it is a number out of range (greater than or equal to the size of productListArr).
 
-Req 3. You need to implement another validation plan to get a valid input from the user for quantity. An
+*3* You need to implement another validation plan to get a valid input from the user for quantity. An
 input value is considered invalid if:
   * it is not a number at all;
   * it is not an integer number;
   * it is zero or a negative number;
   * it is greater than 100.
 
-Req 4. You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
+*4* You need to design a looping plan to implement the Information Gathering Phase. Refer to Functional
 Requirements and Fig. 1 for the detail of data flow in the loop. Clearly, this task should
 incorporate the works in Task 2 and 3.
 
-Req 5. Your program needs to calculate the total cost for all ordered products in the shopping cart. The
+*5* Your program needs to calculate the total cost for all ordered products in the shopping cart. The
 calculation formula is provided: 
 
 ![alt tag](https://i.imgur.com/omlUchO.jpg)
 
-Req 6. Your program needs to find the most expensive product in the shopping cart. To do it, for each of the
+*6* Your program needs to find the most expensive product in the shopping cart. To do it, for each of the
 products added in to the cart you need to retrieve the corresponding price from priceListArr, and
 then compare the prices one by one. Once you find out the most expensive price, the corresponding
 product item in productListArr will be the most expensive product in the shopping cart.
 If you have multiple products in the cart sharing the same most expensive price you can select any
 one of them as the “most expensive product”.
 
-Req 7. Your program also needs to find the least expensive product in the shopping cart. You may adopt
+*7* Your program also needs to find the least expensive product in the shopping cart. You may adopt
 the the same strategy in previous task for this task. Again, if you have multiple products in the
 cart sharing the same least expensive price you can select any one of them as the “least expensive
 product”.
 
-Req 8. Your program needs to be able to calculate the average cost for all product items in the shopping
+*8* Your program needs to be able to calculate the average cost for all product items in the shopping
 cart. This can be done by the total cost divided by the accumulated value of quantities:
 
 ![alt tag](https://i.imgur.com/e7aBaLp.jpg)
 
 You should handle the “Division by Zero” exception when calculating average.
 
-Req 9. Print to a table the detailed information of shopping cart, such as product name, price, quantity,
+*9* Print to a table the detailed information of shopping cart, such as product name, price, quantity,
 and cost. You should adopt an iteration plan to visit the elements stored in quantityArr and
 orderedP roductCodeArr in order to get the index to retrieve product names and prices from
 productListArr and priceListArr.
 All currency values should be at cents in terms of precision.
 
-Req 10. Print to an unordered list the statistic information (total cost, most expensive item, least expensive
+*10* Print to an unordered list the statistic information (total cost, most expensive item, least expensive
 item, and average cost per unit for the ordered product items) on shopping cart.
 The table and the list should be formatted like the screenshot in Figure 2. The same as that in
 Task 9, all currency values should be at cents in terms of precision.
@@ -130,20 +130,20 @@ You need to test the program for all functionality thoroughly before delivering 
 program should be running appropriately without any syntax and logic errors.
 
 # Non-Functional Requirements
-Func-Req 1. All code should appear in the script section in the head of the HTML document. Do not
+*1* All code should appear in the script section in the head of the HTML document. Do not
 write any code in the HTML body. All functionality are delivered by JavaScript.
 In the script order your code as follows:
   * Constants;
   * Variables and objects (declared and initialised);
   * Other statements.
 
-Func-Req 2. Variable and constant identifiers should use an appropriate convention. Identifiers should be
+*2* Variable and constant identifiers should use an appropriate convention. Identifiers should be
 written consistently throughout the code.
 
-Func-Req 3. Code is indented appropriately and grouped in blocks according to the common tasks attempting
+*3* Code is indented appropriately and grouped in blocks according to the common tasks attempting
 to.
 
-Func-Req 4. Appropriate comments should be added to all blocks of code. Do not simply translate the
+*4* Appropriate comments should be added to all blocks of code. Do not simply translate the
 syntax into English for comments, instead, describe the purpose of the code block.
 
 # Submission
