@@ -1,33 +1,84 @@
 <html>
-	<head>
-    	<script>   
-		
-    		//data provided by HomewareCity for shopping catalogue      
-			var productListArr = new Array('Salad Server Set', 'Party Serviette Holder', 
-				'Tea Set', 'Mixing Bowl Set', 'Knife Block Set', 'Coffee Capsule Holder', 
-				'Plastic Sensor Soap Pump', 'Storage Bucket', 'Oven Glove', 'Apron', 
-				'Biscuit Barrel', 'Chopping Board', 'Carioca Cups', 'Soup Bowls', 
-				'Elevate Wood Turner', 'Pasta Machine', 'Teapot', 'Cake Pop Scoop', 
-				'Cookbook Stand', 'Chocolate Station', 'Coffee Maker', 'Pepper Mill', 
-				'Salt Mill', 'Glass Storage Jar', 'Measuring jug', 'Kitchen Scale', 
-				'Tenderiser', 'Pizza Docker', 'Knife Sharpener', 'Steel Cork Opener', 
-				'Steel Garlic Press', 'Steel Can Opener', 
-				'Stainless Steel Crank Flour Sifter', 'Mineral Stone Mortar and Pestle', 
-				'Citrus Cather', 'Cherry & Olive Pitter', 'Multi Grater-Detachable', 
-				'Stainless Steel Colander', 'Steel Pizza Pan', 'Pop Container');
-			var priceListArr = new Array(18.70, 11.95, 39.95, 49.95, 99.95, 29.95, 79.95, 24.95, 
-				9.95, 29.95, 39.95, 12.95, 54.95, 43.00, 19.95, 144.95, 29.95, 9.95, 
-				29.95, 34.95, 29.00, 84.94, 84.95, 4.95, 19.95, 39.95, 34.95, 19.95, 
-				79.95, 36.95, 34.95, 36.95, 33.95, 74.95, 19.95, 27.95, 26.95, 44.95, 
-				12.95, 22.95);
-    		
-    		
-        	
-			
-			
-        	
-        </script>
-    </head>
-	<body>		
-	</body>
+
+<head>
+    <script>
+        //data provided by HomewareCity for shopping catalogue 
+        var productListArr = new Array('Salad Server Set', 'Party Serviette Holder', 'Tea Set', 'Mixing Bowl Set', 'Knife Block Set', 'Coffee Capsule Holder', 'Plastic Sensor Soap Pump', 'Storage Bucket', 'Oven Glove', 'Apron', 'Biscuit Barrel', 'Chopping Board', 'Carioca Cups', 'Soup Bowls', 'Elevate Wood Turner', 'Pasta Machine', 'Teapot', 'Cake Pop Scoop', 'Cookbook Stand', 'Chocolate Station', 'Coffee Maker', 'Pepper Mill', 'Salt Mill', 'Glass Storage Jar', 'Measuring jug', 'Kitchen Scale', 'Tenderiser', 'Pizza Docker', 'Knife Sharpener', 'Steel Cork Opener', 'Steel Garlic Press', 'Steel Can Opener', 'Stainless Steel Crank Flour Sifter', 'Mineral Stone Mortar and Pestle', 'Citrus Cather', 'Cherry & Olive Pitter', 'Multi Grater-Detachable', 'Stainless Steel Colander', 'Steel Pizza Pan', 'Pop Container');
+        var priceListArr = new Array(18.70, 11.95, 39.95, 49.95, 99.95, 29.95, 79.95, 24.95, 9.95, 29.95, 39.95, 12.95, 54.95, 43.00, 19.95, 144.95, 29.95, 9.95, 29.95, 34.95, 29.00, 84.94, 84.95, 4.95, 19.95, 39.95, 34.95, 19.95, 79.95, 36.95, 34.95, 36.95, 33.95, 74.95, 19.95, 27.95, 26.95, 44.95, 12.95, 22.95);
+        
+        //Global variables and arrays.
+        var orderedProductCode = []; // this is where the product codes of items selected will go.
+        var orderedProductQuantity = []; // this is where the product prices of items selected will go.
+        var productSelection; // this is used in userProductSelect(), it is global so other functions can access it.
+        var quantity; // this is used in userQuantitySelect(), it is global so other functions can access it.
+        
+        /* initTable() loads the product list table. I had to load the start() function with 1.5 second delay 
+        because the program would start before the table had been loaded */
+        
+        initTable();
+        setTimeout(start,1500) 
+
+        /* This is the start() function, it confirms with the user whether they'd like to purchase a product
+        If TRUE then it will start the userProductSelect() function, if they say no, then Tom and Andrews functions
+        will be triggered to calculate and present the information. */
+        function start() {
+            var input = confirm(`Purchase a product?`);
+            if (input) {
+                userProductSelect();
+            }
+            else {
+                alert("Thanks for visiting!")
+                
+                    // RUN TOM'S CALCULATION FUNCTION, THEN TOM'S FUNCTION WILL TRIGGER ANDREWS OUTPUT FUNCTION.
+            }
+        }
+
+        /* This function prompts the user for a product code which correlates with the index of both the productListArr and priceListArr
+        it also validates in the input to make sure it is a number and it matches a stored product code. If it is invalid they are prompted again. */
+        function userProductSelect() {
+            productSelection = parseInt(prompt("Please enter a product code, 0 - 39"));
+            if (isNaN(productSelection) || productSelection < 0 || productSelection > 39) {
+                alert("You did not enter a valid product code, please try again");
+                userProductSelect();
+            }
+            else {
+                userQuantitySelect();
+            }
+        }
+        /* After the user has selected a product, they are then prompted to enter a quantity. It conducts a similar validation process
+        to check it is a number and between 1 and 100(maximum as per assignment spec). If it is invalid they are prompted again.*/
+        function userQuantitySelect() {
+            quantity = parseInt(prompt(`Please enter a Quantity of 1 - 100 for ${productListArr[productSelection]}`));
+            if (isNaN(quantity) || quantity < 1 || quantity > 100) {
+                alert("Sorry, you entered an invalid quantity, please try again");
+                userQuantitySelect();
+            }
+            else {
+                alert(`${quantity} x ${productListArr[productSelection]} added to Shopping Cart`)
+                orderedProductCode.push(productSelection);
+                orderedProductQuantity.push(quantity);
+                start();
+            }
+        }
+        
+        // This function initializes the building of the table using a 'for loop' to iterate over the product and price list arrays.
+        function initTable() {
+            document.write("<table id='table' style='text-align:center;' border='1'");
+            document.write(`<tr><th>Code</th><th>Product</th><th>Price</th><th>Code</th><th>Product</th><th>Price</th>
+                        <th>Code</th><th>Product</th><th>Price</th><th>Code</th><th>Product</th><th>Price</th></tr>`);
+            for (let i = 0; i < productListArr.length; i++) {
+                document.write(`<tr>
+                                <th id="code` + i + `">` + i + `</th><td>` + productListArr[i] + `</td><td>` + priceListArr[i] + `</td>
+                                <th id="code` + ++i + `">` + i + `</th><td>` + productListArr[i] + `</td><td>` + priceListArr[i] + `</td>
+                                <th id="code` + ++i + `">` + i + `</th><td>` + productListArr[i] + `</td><td>` + priceListArr[i] + `</td>
+                                <th id="code` + ++i + `">` + i + `</th><td>` + productListArr[i] + `</td><td>` + priceListArr[i] + `</td>
+                            </tr>`);
+            }
+            document.write("</table>");
+        }
+    </script>
+</head>
+
+<body> </body>
+
 </html>
