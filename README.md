@@ -2,10 +2,17 @@
 CSC1401 Foundation Programming Assignment
 
 ### Team Member Tasks ###
-* Tom - *nothing yet*
+* Ari - 
+ * [ PRINT TABLE ] - Step 1
+ * [ USER INPUT & VALIDATION] - Step 2, Step 3, Step 4
+ 
+* Tom - 
+ * [ CALCULATION ] - Step 5, Step 6, Step 7, Step 8
+ 
 * Andrew - *nothing yet*
-* Ari - *nothing yet*
-* Team - *nothing yet*
+ * [ OUTPUT & VALIDATION ] - Step 9, Step 10, Optional Step
+ 
+* Team - *State of Completeness, other word documents etc*
 
 # Business Requirements
 As the prototype for a web-based shopping cart system, the program is to be implemented in
