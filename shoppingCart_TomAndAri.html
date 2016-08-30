@@ -36,8 +36,8 @@
         /* This function prompts the user for a product code which correlates with the index of both the productListArr and priceListArr
         it also validates in the input to make sure it is a number and it matches a stored product code. If it is invalid they are prompted again. */
         function userProductSelect() {
-            productSelection = parseInt(prompt("Please enter a product code, 0 - 39"));
-            if (isNaN(productSelection) || productSelection < 0 || productSelection > 39) {
+            productSelection = prompt("Please enter a product code, 0 - 39");
+            if (isNaN(productSelection) || productSelection < 0 || productSelection > 39 || productSelection % 1 !== 0 ) {
                 alert("You did not enter a valid product code, please try again");
                 userProductSelect();
             }
@@ -48,8 +48,8 @@
         /* After the user has selected a product, they are then prompted to enter a quantity. It conducts a similar validation process
         to check it is a number and between 1 and 100(maximum as per assignment spec). If it is invalid they are prompted again.*/
         function userQuantitySelect() {
-            quantity = parseInt(prompt(`Please enter a Quantity of 1 - 100 for ${productListArr[productSelection]}`));
-            if (isNaN(quantity) || quantity < 1 || quantity > 100) {
+            quantity = prompt(`Please enter a Quantity of 1 - 100 for ${productListArr[productSelection]}`);
+            if (isNaN(quantity) || quantity < 1 || quantity > 100 || quantity % 1 !== 0) {
                 alert("Sorry, you entered an invalid quantity, please try again");
                 userQuantitySelect();
             }
