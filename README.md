@@ -9,7 +9,7 @@ CSC1401 Foundation Programming Assignment
 * Tom - 
  * [ CALCULATION ] - Step 5, Step 6, Step 7, Step 8
  
-* Andrew - *nothing yet*
+* Andrew - 
  * [ OUTPUT & VALIDATION ] - Step 9, Step 10, Optional Step
  
 * Team - *State of Completeness, other word documents etc*
