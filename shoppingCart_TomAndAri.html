@@ -11,6 +11,12 @@
         var orderedProductQuantity = []; // this is where the product prices of items selected will go.
         var productSelection; // this is used in userProductSelect(), it is global so other functions can access it.
         var quantity; // this is used in userQuantitySelect(), it is global so other functions can access it.
+        var totalCost = 0; // I made a new variable called totalCost which eventually will give you just that.
+        var orderedPriceArray = []; // This is where we will send the prices we need.
+        var maximumPrice = 0; //gets defined later on in a function
+        var minimumPrice = 0; // ditto
+        var totalQuantity = 0;  // new variable to hold the total number fo items
+        var averageCost;  // another new variable to hold the average cost once calculated
         
         /* initTable() loads the product list table. I had to load the start() function with 1.5 second delay 
         because the program would start before the table had been loaded */
@@ -29,15 +35,15 @@
             else {
                 alert("Thanks for visiting!")
                 
-                    // RUN TOM'S CALCULATION FUNCTION, THEN TOM'S FUNCTION WILL TRIGGER ANDREWS OUTPUT FUNCTION.
+                    costTotal();
             }
         }
 
         /* This function prompts the user for a product code which correlates with the index of both the productListArr and priceListArr
         it also validates in the input to make sure it is a number and it matches a stored product code. If it is invalid they are prompted again. */
         function userProductSelect() {
-            productSelection = prompt("Please enter a product code, 0 - 39");
-            if (isNaN(productSelection) || productSelection < 0 || productSelection > 39 || productSelection % 1 !== 0 ) {
+            productSelection = parseInt(prompt("Please enter a product code, 0 - 39"));
+            if (isNaN(productSelection) || productSelection < 0 || productSelection > 39) {
                 alert("You did not enter a valid product code, please try again");
                 userProductSelect();
             }
@@ -49,7 +55,7 @@
         to check it is a number and between 1 and 100(maximum as per assignment spec). If it is invalid they are prompted again.*/
         function userQuantitySelect() {
             quantity = prompt(`Please enter a Quantity of 1 - 100 for ${productListArr[productSelection]}`);
-            if (isNaN(quantity) || quantity < 1 || quantity > 100 || quantity % 1 !== 0) {
+            if (isNaN(quantity) || quantity < 1 || quantity > 100) {
                 alert("Sorry, you entered an invalid quantity, please try again");
                 userQuantitySelect();
             }
@@ -76,6 +82,39 @@
             }
             document.write("</table>");
         }
+        
+        
+
+        function costTotal() {
+            orderedProductCode.forEach(function(x){  // the .forEach will take each item in the orderedProductCode array, one at a time and run it through the function on the next line. Each item will be represented by x.
+                orderedPriceArray.push(priceListArr[x]);  // Using the price code as the index number on priceListArr it will return the corresponding codes price. Then we use .push to send this price to our new orderedPriceArray.
+                
+            });
+            console.log(orderedPriceArray);
+            maximumPrice = Math.max(...orderedPriceArray);
+            minimumPrice = Math.min(...orderedPriceArray);
+
+            for (let i = 0; i < orderedProductQuantity.length; i++) {
+                totalCost = totalCost + Number(orderedProductQuantity[i]) * Number(orderedPriceArray[i]);  // Using a For Loop to multiple the quantity and its respective price in ordered. i will start at 0 and increment for each item, so that way we are                  multiply the quantity and price at 0, then the quantity and price at 1, so on and so forth, adding each number to our totalCost variable.
+                 }
+            
+            console.log('Maximum Price: '+maximumPrice);
+            console.log('Minimum Price: '+minimumPrice);
+            console.log('orderedPriceArray - List of prices: '+orderedPriceArray);
+            console.log('Total Cost: '+totalCost);
+            costAverage();
+            }
+            
+            function costAverage() {
+            for (let i = 0; i < orderedProductQuantity.length; i++) { // Another For Loop...
+                totalQuantity = totalQuantity+ Number(orderedProductQuantity[i]); // The number weren't adding up, I figured they may not be recognized as numbers by thr program so I encased it in Number( );
+            }
+            averageCost = totalCost / totalQuantity;
+                console.log('Average Cost: '+averageCost);
+                console.log('Total quantity of items: '+totalQuantity);
+        }
+        
+        
     </script>
 </head>
 
