@@ -113,7 +113,16 @@
                 console.log('Average Cost: '+averageCost);
                 console.log('Total quantity of items: '+totalQuantity);
         }
-        
+         function printTable() {
+            document.write("<table id='table' style='text-align:center;' border='1'");
+            document.write(`<tr><th>Product</th><th>Price</th><th>Quantity</th><th>Cost</th></tr>`);
+            for (let i = 0; i < productSelection.length; i++) {
+                document.write(`<tr>
+                                <th id="code` + i + `">` + i + `</th><td>` + productSelection[i] + `</td><td>` + orderedPriceArray[i] + `</td><td>` + quantity[i] + `</td><td>` + totalCost[i] + `</td>
+                              </tr>`);
+            }
+            document.write("</table>");
+        }
         
     </script>
 </head>
